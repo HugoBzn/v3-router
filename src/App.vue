@@ -3,23 +3,14 @@
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <br>
-  <router-link to="/">Inicio</router-link> |
-  <router-link to="/about">Acerca de...</router-link>
-  <router-view></router-view>
+<div id="nav">
+  <router-link to="/">Inicio</router-link>
+  <router-link to="/brazil">Brazil</router-link>
+  <router-link to="/hawaii">Hawaii</router-link>
+  <router-link to="/panama">Panama</router-link>
+  <router-link to="/jamaica">Jamaica</router-link>
+</div>
+  <div class="container">
+    <router-view></router-view>
+  </div>
 </template>
-
-<style>
-  body {
-    background-color: #121736;
-  }
-  #app {
-    font-family: system-ui, -apple-system;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: white;
-    margin-top: 60px;
-  }
-</style>
