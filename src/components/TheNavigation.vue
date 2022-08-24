@@ -7,3 +7,10 @@
     <router-link to="/jamaica">Jamaica</router-link>
     </div>
 </template>
+
+<style>
+    #nav .navigation-active-link {
+        color: purple;
+        border-bottom: 2px solid purple;
+    }
+</style>
