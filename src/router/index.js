@@ -31,6 +31,10 @@ const routes = [
     name: "Jamaica",
     component: () => import("@/views/Jamaica.vue"),
   },
+  {
+    path: "/destination/:id",
+    component: () => import("@/views/DestinationShow.vue"),
+  },
 ];
 
 // 2. Creando el VUE Router
