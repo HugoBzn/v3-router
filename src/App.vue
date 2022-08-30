@@ -12,7 +12,7 @@ export default {
   <the-navigation></the-navigation>
   <div class="container">
     <router-view v-slot="{ Component }">
-      <transition name="slide" mode="out-in">
+      <transition name="fade" mode="out-in">
         <component :is="Component" :key="$route.path"> </component>
       </transition>
     </router-view>
@@ -20,13 +20,12 @@ export default {
 </template>
 
 <style>
-.slide-enter-active,
-.slide-leave-active {
-  transition: opacity 1s, transform 1s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
 }
-.slide-enter-from,
-.slide-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
-  transform: translate(-30%);
 }
 </style>
