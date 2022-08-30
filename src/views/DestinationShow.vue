@@ -15,7 +15,8 @@ export default {
     },
     slug: {
       type: String
-    }
+    },
+    experienceSlug: { type: String }
   },
   computed: {
     destination() {
@@ -51,6 +52,7 @@ export default {
         <experience-card :experience="experience" />
       </router-link>
     </div>
+    <router-view></router-view>
   </section>
 </template>
 
