@@ -3,10 +3,13 @@
 import sourceData from "@/data.json";
 // Importando componente
 import ExperienceCard from "@/components/ExperienceCard.vue";
+// Importando el componente GoBack
+import GoBack from "@/components/GoBack.vue";
 
 export default {
   components: {
-    ExperienceCard
+    ExperienceCard,
+    GoBack,
 },
   props: {
     id: {
@@ -31,6 +34,7 @@ export default {
 <template>
   <section class="destination">
     <h1>{{ destination.name }}</h1>
+    <go-back></go-back>
     <div class="destination-details">
       <img :src="`/images/${destination.image}`" :alt="destination.name" />
       <p>
