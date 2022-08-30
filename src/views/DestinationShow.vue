@@ -6,8 +6,8 @@ import ExperienceCard from "@/components/ExperienceCard.vue";
 
 export default {
   components: {
-    ExperienceCard,
-  },
+    ExperienceCard
+},
   props: {
     id: {
       type: Number,
@@ -35,13 +35,18 @@ export default {
     </div>
   </section>
   <section class="experiences">
-    <h2>Mejores experiencias en {{ destination.name }}</h2>
+    <h2>Mejores Experiencias en {{ destination.name }}</h2>
     <div class="cards">
-      <experience-card
-      v-for="experience in destination.experiences"
-      :key="experience.slug"
-      :experience="experience"
-      />
+      <router-link
+        v-for="experience in destination.experiences"
+        :key="experience.slug"
+        :to="{
+          name: 'experience.show',
+          params: { experienceSlug: experience.slug },
+        }"
+      >
+        <experience-card :experience="experience" />
+      </router-link>
     </div>
   </section>
 </template>
